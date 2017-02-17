@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PetClinic">
+<head>
+  <title>Lista PET</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../lib/angular/angular.js"></script>
+  <script src="../js/service/PetClinic.js"></script>
+  <script src="../js/controllers/addCtrl.js"></script>
+</head>
+
+<body ng-controller="addCtrl">
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+      <a class="navbar-brand" href="../index.html">HOME</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="cad-dono.html">CADASTRO-DONO</a></li>
+        <li><a href="cad-pet.html">CADASTRO-PET</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid bg-1 text-center">
+  <div id="contact" class="container">
+    <h3 class="text-center">Cadastro de Pet</h3>
+        <div class="col-md-6">
+          <div class="row">
+            <table border="1" >
+      			<tr>
+      				<th>Nome</th>
+      				<th>Data Nascimento</th>
+      				<th>Dono</th>
+      				<th>Raça</th>
+      			</tr>
+      			<tr ng-repeat="pet in pets">
+      		   	<td>{{pet.nome}}</td>
+      				<td>{{pet.dataNascimento}}</td>
+      				<td>{{pet.dono}}</td>
+      				<td>{{pet.raca}}</td>
+      			</tr>
+      		</table>
+        </div>
+      </div>
+    </div>
+  </div>
+      <br>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+"development": {
+"username": "projPet",
+"password": "pet123",
+"database": "PetClinic",
+"host": "127.0.0.1",
+"dialect": "postgres",
+"port": "8100"
+}
+}
